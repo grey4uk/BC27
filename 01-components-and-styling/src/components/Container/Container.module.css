@@ -1,0 +1,22 @@
+.container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 40vw;
+        margin: 0 auto;
+}
+
+.active {
+        composes: container;
+        color: red
+}
+
+.unactive {
+        composes: container;
+        color: grey
+}
+
+.box {
+        border-radius: 50%;
+}
