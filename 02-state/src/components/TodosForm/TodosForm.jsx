@@ -15,7 +15,11 @@ export default class TodosForm extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.handleAddTodo({ ...this.state, id: uuid() });
+    this.props.handleAddTodo({
+      ...this.state,
+      id: uuid(),
+      isDone: false,
+    });
     //     this.setState(INITIAL_STATE)
 
     this.reset();
