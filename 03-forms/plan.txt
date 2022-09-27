@@ -1,17 +1,6 @@
-------------------Forms-----------------------------
-- Неконтрольовані форми з event.currentTarget.elements
-- Паттерн controlled element 
-- Робота з input, checkbox, radio, select
-- Форма реєстрації
-- Генерація id для елементів форми
-- Коллекція завдань: 
-    - фільтрація по вмісту (текст)
-
-
------------jsconfig.json-----------
-{
-  "compilerOptions": {
-    "baseUrl": "src"
-  },
-  "include": ["src"]
-}
+- Життєвий цикл компонента. http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+- Методи життєвого циклу компонента-класу.
+-  localStorage (componentDidMount и componentDidUpdate)
+- Модальне вікно (componentDidMount и componentWillUnmount) 
+- omponentWillUnmount
+- (shouldComponentUpdate)

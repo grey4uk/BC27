@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { toast, ToastContainer } from 'react-toastify';
 
 import { TodoForm } from './components/TodoForm';
 import FilterTodos from 'components/FilterTodos';
@@ -13,9 +14,20 @@ class App extends Component {
         el.title.toLowerCase() === todo.title.toLowerCase()
     );
     if (isDuplicate) {
-      alert(
-        `Task with title - ${isDuplicate.title} already exist`
+      toast(
+        `Task with title - ${isDuplicate.title} already exist 🦄 `,
+        {
+          position: 'top-center',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        }
       );
+      // alert(
+      //   `Task with title - ${isDuplicate.title} already exist`
+      // );
       return;
     }
     this.setState((prev) => ({
@@ -54,6 +66,7 @@ class App extends Component {
           filteredTodos={filteredTodos}
           todos={todos}
         />
+        <ToastContainer />
       </div>
     );
   }
