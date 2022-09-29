@@ -8,30 +8,13 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      pokemons: [],
-      onePokemon: null,
+      pokemons: this.props.pokemons,
+      onePokemon: {},
       name: '',
     };
-    console.log('constructor-------------');
-  }
-  // state = {
-  //   value: [],
-  //   onePokemon: null,
-  //   name: this.props.init,
-  // };
-
-  static defaultProps = {};
-
-  static getDerivedStateFromProps(nextProps, prevState) {
-    console.log('getDerivedStateFromProps}]]]]]]]');
-    return prevState;
-    // return prevState.name !== nextProps.init
-    //   ? { ...prevState, name: nextProps.init }
-    //   : prevState;
   }
 
   componentDidMount() {
-    console.log('componentDidMount++++++++++++++++');
     const parsedPokemons = JSON.parse(
       localStorage.getItem(POKEMONS)
     );
@@ -91,8 +74,6 @@ class App extends Component {
 
   render() {
     console.log('render>>>>');
-    // console.log(this.state);
-    // const { findPokemon } = this;
     const { pokemons, name } = this.state;
     return (
       <>
@@ -112,23 +93,9 @@ class App extends Component {
                         this.setState({ name: el.name })
                       }>
                       <p>{el.name}</p>
-                      {/* <img
-                        src={webformatURL}
-                        alt='alt'
-                        width='300'
-                      /> */}
                     </li>
                   ))
                 : null}
-              {/* {this.state.value.map(({ webformatURL, id }) => (
-                <li key={id}>
-                  <img
-                    src={webformatURL}
-                    alt='alt'
-                    width='300'
-                  />
-                </li>
-              ))} */}
             </ul>
           </>
         )}

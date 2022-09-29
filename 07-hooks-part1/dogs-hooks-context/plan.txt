@@ -1,0 +1,7 @@
+https://dog.ceo/api/breeds/image/random/:amount
+
+-----------------Hooks---------------------------
+- useState
+- useEffect
+- Контекст и useContext
+- Рефи и useRef
