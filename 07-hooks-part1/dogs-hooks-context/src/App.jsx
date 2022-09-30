@@ -8,9 +8,11 @@ class App extends Component {
   render() {
     return (
       <SelectContextProvider>
+        {/* <ImagesContextProvider> */}
         <ErrorBoundary>
           <Application />
         </ErrorBoundary>
+        {/* </ImagesContextProvider> */}
       </SelectContextProvider>
     );
   }

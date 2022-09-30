@@ -16,3 +16,18 @@ const SelectContextProvider = ({ children }) => {
   );
 };
 export default SelectContextProvider;
+
+// const Modal = ({ prop }) => {
+//   return (
+//     <div>
+//       <Img prop={prop} />
+//     </div>
+//   );
+// };
+// const Img = ({ prop }) => {
+//   return (
+//     <div>
+//       <MyImg prop={prop} />
+//     </div>
+//   );
+// };

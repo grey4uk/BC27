@@ -3,6 +3,7 @@ import { SelectContext } from '../SelectContext/SelectContext';
 
 const SelectCounty = () => {
   const { handleSelect } = useContext(SelectContext);
+  // const { images } = useContext(ImagesContext);
   return (
     <select onChange={handleSelect}>
       <option>Choose</option>
