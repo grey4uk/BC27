@@ -15,6 +15,7 @@ const App = () => {
   useEffect(() => {
     console.log('inputRef :>> ', inputRef);
     inputRef.current.className = s.input;
+    // inputRef.current = input;
     inputRef.current.focus();
     // inputRef.current.style.background = 'red';
   }, []);
