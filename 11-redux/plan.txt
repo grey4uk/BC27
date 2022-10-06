@@ -1,0 +1,10 @@
+- Основні концепції: store, state, actions, action creators, reducers
+- Redux DevTools (import { devToolsEnhancer } from '@redux-devtools/extension';)
+- Створюєм сховище
+- Екшени і фабрики екшенів
+- Створюєм редюсер
+- Пакет react-redux 
+- Компонент Provider
+- Хуки useDispatch і useSelector
+- Композиція редюсерів із combineReducers
+- Feature based структура файлів і папок

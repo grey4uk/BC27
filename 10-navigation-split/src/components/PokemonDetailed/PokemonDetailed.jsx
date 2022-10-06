@@ -55,12 +55,12 @@ const PokemonDetailed = () => {
 
   return (
     <div>
-      {/* <ButtonBack
+      <ButtonBack
         // onClick={() => navigate(-1)}
         // onClick={() => navigate(location.state)}
         onClick={() => navigate(location.state)}
-      /> */}
-      <Link to={location.state.pathname}>Go back</Link>
+      />
+      {/* <Link to={location.state.pathname}>Go back</Link> */}
       {onePokemon ? (
         <img src={onePokemon} alt='alt' width='300' />
       ) : (
