@@ -1,0 +1,6 @@
+- Розбираємо Redux Toolkit і рефакторим код попереднього заняття 
+- configureStore()
+- createReducer()
+- createAction()
+- createSlice()
+- Бібліотека redux-persist
