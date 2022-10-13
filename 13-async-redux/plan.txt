@@ -1,0 +1,14 @@
+Кастомний мідлвар
+ const customMiddleware = (store) => (next) => (action) => {
+  console.log('store :>> ', store);
+  // store.count+action.payload>10&&alert("sum>10");
+  fetch().then.then((res)=>next({...action,payload:res})).catch.finally()
+  next(action);
+};
+
+- Кастомний мідлвар і стек мідлварів (middleware)
+- Додавання мідлварів у сховище
+- Підхід redux-thunk в тулкіт редаксі
+- Асинхронні дії (операції)
+- HTTP-запити і міграція в операції
+- метод createAsyncThunk и createSlice

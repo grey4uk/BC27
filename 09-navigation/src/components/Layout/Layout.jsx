@@ -21,14 +21,15 @@ const Layout = () => {
         gap: '30px',
       }}>
       <nav>
-        {/* <NavLink
+        <NavLink
           style={(props) => ({
             ...getActiveStyle(props),
             ...{ padding: '10px' },
           })}
-          to='/home'>
-                  Home
-        </NavLink> */}
+          to='/'
+          end>
+          Home
+        </NavLink>
         <NavLink
           style={(props) => ({
             ...getActiveStyle(props),

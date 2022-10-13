@@ -1,4 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
+// import {applyMiddleware} from 'redux'
 import {
   persistStore,
   persistReducer,
@@ -24,7 +25,19 @@ const persistedReducer = persistReducer(
   rootReducer
 );
 
+const customMiddleware1 = (store) => (next) => (action) => {
+  console.log('store :>> ', store);
+  // store.count+action.payload>10&&alert("sum>10");
+  next(action);
+};
+const customMiddleware2 = (store) => (next) => (action) => {
+  console.log('store :>> ', store);
+  // store.count+action.payload>10&&alert("sum>10");
+  next(action);
+};
+
 const store = configureStore({
+  // reducer: persistedReducer,
   reducer: {
     app: persistedReducer,
   },
@@ -41,7 +54,9 @@ const store = configureStore({
         ],
       },
       // serializableCheck: { ignoreActions: true },
-    }),
+    })
+      .concat(customMiddleware1)
+      .concat(customMiddleware2),
 });
 
 export const persistor = persistStore(store);
