@@ -7,7 +7,21 @@ export const todosApi = createApi({
   reducerPath: 'todosApi',
   baseQuery: fetchBaseQuery({
     baseUrl: 'https://62d65f0a15ad24cbf2d59671.mockapi.io',
+    prepareHeaders: (headers, { getState }) => {
+      const token = getState().auth.token;
+
+      // If we have a token set in state, let's assume that we should be passing it.
+      if (token) {
+        headers.set('authorization', `Bearer-${token}`);
+        headers.set('origin', '*');
+      }
+
+      return headers;
+    },
   }),
+  // baseQuery: fetchBaseQuery({
+  //   baseUrl: 'https://62d65f0a15ad24cbf2d59671.mockapi.io',
+  // }),
   tagTypes: ['todos'],
   endpoints: (builder) => {
     return {

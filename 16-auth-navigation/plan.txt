@@ -1,0 +1,12 @@
+Кастомний мідлвар
+ const customMiddleware = (store) => (next) => (action) => {
+  console.log('store :>> ', store);
+  // store.count+action.payload>10&&alert("sum>10");
+  fetch().then.then((res)=>next({...action,payload:res})).catch.finally()
+  next(action);
+};
+
+- RTK - як обробка асинхронних запитів і організація стору
+- селектори і неймінг
+- складні селектори
+- бібліотека мемоізації селекторів reselect
